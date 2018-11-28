@@ -5,8 +5,8 @@
    Tutorial 5
    Case Problem 1
    
-   Author:   
-   Date:     
+   Author: Paige Mabbitt
+   Date: 11.28.18     
    
    Filename: gp_layout.css
 
@@ -23,7 +23,20 @@
 
 /* Flex Layout Styles */
 
+body {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
 
+section#sheet {
+    flex: 3 1 301px;
+}
+
+article {
+    flex: 1 3 180px;
+}
 
 
 
@@ -32,11 +45,22 @@
    ============================================
 */
 
+@media only screen and (max-width: 480px) {
+    img.panel {
+        width: 100%;
+    }
 
+    nav.horizontal {
+        order: 99;
+    }
+
+    body>footer {
+        order: 100;
+    }
+}
 
 
 /* ===================================================
 	Tablet and Desktop Devices: Greater than 480 pixels
    ===================================================
 */
-
